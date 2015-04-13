@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 gulp.task('scripts', function(){
 	gulp.src('src/*.js')
 	.pipe(concat('app.min.js'))
-	.pipe(uplify())
+	//.pipe(uplify())
 	.pipe(gulp.dest('bulid'));
 });
 

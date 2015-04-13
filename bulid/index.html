@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Material Blog</title>
+    <!-- Angulars Material CSS now available via Google CDN; version 0.8 used here -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+</head>
+<body>
+
+  	<div ng-app="Myapp" ng-controller="AppCtrl" layout="column" layout-fill>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>
+            <span>Toolbar with Icon Buttons</span>
+          </h2>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+
+      <section layout="row" flex>
+
+        <md-content flex class="md-padding">
+          <div layout="column" layout-fill layout-align="center center">
+            <p>
+            The left sidenav will 'lock open' on a medium (>=960px wide) device.
+            </p>
+            <div>
+              <md-button ng-click="toggle()" class="md-primary" >
+                Toggle left
+              </md-button>
+            </div>
+          </div>
+        </md-content>
+
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="right">
+          <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Sidenav left</h1>
+          </md-toolbar>
+          <md-content ng-controller="RightCtrl" class="md-padding">
+            <md-button ng-click="close()" class="md-primary">
+              Close Sidenav left
+            </md-button>
+          </md-content>
+        </md-sidenav>
+      </section>
+    </div>
+
+    <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.8 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+    <script src="./app.min.js"></script>
+</body>
+</html>
