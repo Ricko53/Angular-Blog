@@ -1,0 +1,24 @@
+{
+  "name": "Angular-Blog",
+  "version": "1.0.0",
+  "description": "My Blog use Angular and Node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TommyHili/Angular-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TommyHili/Angular-Blog/issues"
+  },
+  "homepage": "https://github.com/TommyHili/Angular-Blog",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
