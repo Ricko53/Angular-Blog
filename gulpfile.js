@@ -9,8 +9,16 @@ gulp.task('scripts', function(){
 	.pipe(gulp.dest('bulid'));
 });
 
-gulp.task('watch',function(){
-	gulp.watch('src/*.js',['scripts']);
+gulp.task('css', function(){
+	gulp.src('src/css/*.css')
+	.pipe(concat('app.css'))
+	//.pipe(uplify())
+	.pipe(gulp.dest('bulid'));
 });
 
-gulp.task('default', ['watch', 'scripts']);
+gulp.task('watch',function(){
+	gulp.watch('src/*.js',['scripts']);
+	gulp.watch('src/css/*.css',['css']);
+});
+
+gulp.task('default', ['watch', 'scripts','css']);
