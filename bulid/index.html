@@ -3,18 +3,17 @@
 <head>
 	<title>Angular Material Blog</title>
     <!-- Angulars Material CSS now available via Google CDN; version 0.8 used here -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">-->
     <link rel="stylesheet" href="./app.css">
 </head>
 <body>
 
   	<div ng-app="Myapp" ng-controller="AppCtrl" layout="column" layout-fill>
-      <md-toolbar>
+      <md-toolbar md-scroll-shrink>
         <div class="md-toolbar-tools">
-          <h2>
-            <span>Toolbar with Icon Buttons</span>
-          </h2>
-          <span flex></span>
+          <h3>
+            <span>My App Title</span>
+          </h3>
         </div>
       </md-toolbar>
 

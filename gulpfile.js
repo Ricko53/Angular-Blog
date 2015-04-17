@@ -1,24 +1,37 @@
 var gulp = require('gulp');
 var uplify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var less = require('gulp-less');
 
 gulp.task('scripts', function(){
-	gulp.src('src/*.js')
+	return gulp.src('src/*.js')
 	.pipe(concat('app.min.js'))
 	//.pipe(uplify())
 	.pipe(gulp.dest('bulid'));
 });
 
 gulp.task('css', function(){
-	gulp.src('src/css/*.css')
+	return gulp.src('src/css/*.css')
 	.pipe(concat('app.css'))
 	//.pipe(uplify())
 	.pipe(gulp.dest('bulid'));
 });
 
+gulp.task('less', function(){
+	return gulp.src('src/less/*.less')
+	.pipe(less())
+	.pipe(concat('less.css'))
+	.pipe(gulp.dest('bulid'))
+	.on('error', function (err) {
+            gutil.log(err);
+            this.emit('end');
+        });
+});
+
 gulp.task('watch',function(){
 	gulp.watch('src/*.js',['scripts']);
 	gulp.watch('src/css/*.css',['css']);
+	gulp.watch('src/less/*.less',['less']);
 });
 
-gulp.task('default', ['watch', 'scripts','css']);
+gulp.task('default', ['watch', 'scripts', 'css', 'less']);
