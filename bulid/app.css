@@ -5636,6 +5636,7 @@ md-optgroup {
 md-sidenav {
   position: absolute;
   width: 304px;
+  height: 120%;
   min-width: 180px;
   max-width: 304px;
   bottom: 0;
@@ -6541,4 +6542,10 @@ md-tooltip {
 md-card {
   min-height: 150px; 
   max-width: 700px;
+}
+
+#sidemenu{
+	position: fixed;
+	left: 80%;
+	bottom: 8%;
 }

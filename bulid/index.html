@@ -4,7 +4,7 @@
 	<title>Angular Material Blog</title>
     <!-- Angulars Material CSS now available via Google CDN; version 0.8 used here -->
     <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">-->
-    <link rel="stylesheet" href="./app.css">
+  <link rel="stylesheet" href="./app.css">
 </head>
 <body>
 
@@ -24,11 +24,6 @@
               <p>
               The left sidenav will 'lock open' on a medium (>=960px wide) device.
               </p>
-              <div>
-                <md-button ng-click="toggle()" class="md-primary" >
-                  Toggle left
-                </md-button>
-              </div>
 
               <md-card>
                 <img src="https://material.angularjs.org/img/washedout.png" class="md-card-image" alt="Washed Out">
@@ -40,9 +35,7 @@
                   </p>
                 </md-card-content>
               </md-card>
-
             </div>
-
         </md-content>
 
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="right">
@@ -56,6 +49,10 @@
           </md-content>
         </md-sidenav>
       </section>
+
+      <md-button class="md-fab md-accent" id="sidemenu" aria-label="Use Android" ng-click="toggle()">
+          <md-icon md-svg-icon="menu"></md-icon>
+      </md-button>
     </div>
 
     <!-- Angular Material Dependencies -->
