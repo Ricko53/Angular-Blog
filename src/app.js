@@ -23,7 +23,7 @@
                         templateUrl: 'Blog/home.html',
                         controller: 'HomeCtrl'
                       })
-                      .when('/Blog',{
+                      .when('/blog',{
                         templateUrl: 'Blog/Blog.html',
                         controller: 'BlogCtrl'
                       });

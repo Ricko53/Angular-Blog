@@ -11,3 +11,8 @@ Out Blog use AngularJS and Node,In order to share our learning experience.
 ###How to Use
     #npm install 
     #gulp 
+
+###Start http-server
+    cd bulid
+	http-server -a localhost -p 8000
+
