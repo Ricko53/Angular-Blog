@@ -1,23 +1,32 @@
 (function(angular, undefined){
   "use strict";
-  angular.module('Myapp', ['ngMaterial'])
-  .config(function($mdThemingProvider, $mdIconProvider){
-
+  angular.module('Myapp', ['ngMaterial', 'ngRoute'])
+  .config(function($mdThemingProvider, $mdIconProvider, $routeProvider, $locationProvider){
                   $mdIconProvider
-                      .defaultIconSet("./assets/svg/avatars.svg", 128)
-                      .icon("menu"       , "./assets/svg/menu.svg"        , 24)
-                      .icon("share"      , "./assets/svg/share.svg"       , 24)
-                      .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
-                      .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
-                      .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
-                      .icon("phone"      , "./assets/svg/phone.svg"       , 512);
+                      .defaultIconSet("./img/icons/avatars.svg", 128)
+                      .icon("menu"       , "./img/icons/menu.svg"        , 24)
+                      .icon("share"      , "./img/icons/share.svg"       , 24)
+                      .icon("google_plus", "./img/icons/google_plus.svg" , 512)
+                      .icon("hangouts"   , "./img/icons/hangouts.svg"    , 512)
+                      .icon("twitter"    , "./img/icons/twitter.svg"     , 512)
+                      .icon("phone"      , "./img/icons/phone.svg"       , 512);
 
-                      $mdThemingProvider.theme('default')
+                  $mdThemingProvider.theme('default')
                           .primaryPalette('teal',{
                             'default': '600',
                             'hue-1':   '400',
                           })
                           .accentPalette('red');
+
+                  $routeProvider
+                      .when('/',{
+                        templateUrl: 'Blog/home.html',
+                        controller: 'HomeCtrl'
+                      })
+                      .when('/blog',{
+                        templateUrl: 'Blog/Blog.html',
+                        controller: 'BlogCtrl'
+                      });
 
   })
   .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdComponentRegistry, $log) {
@@ -48,6 +57,11 @@
                             $log.debug("close RIGHT is done");
                           });
     };
+  })
+  .controller('HomeCtrl', function(){
+
+  })
+  .controller('BlogCtrl', function(){
+
   });
-  
 })(angular);

@@ -5636,6 +5636,7 @@ md-optgroup {
 md-sidenav {
   position: absolute;
   width: 304px;
+  height: 120%;
   min-width: 180px;
   max-width: 304px;
   bottom: 0;
