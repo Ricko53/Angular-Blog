@@ -13,6 +13,9 @@ Out Blog use AngularJS and Node,In order to share our learning experience.
     #gulp 
 
 ###Start http-server
+	#npm start
+	
+    //excellent communication skills
     cd bulid
 	http-server -a localhost -p 8000
 
