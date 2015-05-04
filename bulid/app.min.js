@@ -33,6 +33,15 @@
 
     $scope.toggle = angular.noop;
     $scope.isOpen = function() { return false };
+    $scope.topmenu = true;
+
+    $scope.menuhide = function(){
+      $scope.topmenu = false;
+    }
+
+    $scope.menuhshow = function(){
+      $scope.topmenu = true;
+    }
 
     $mdComponentRegistry
       .when('right')

@@ -9,7 +9,8 @@
 <body>
 
   	<div ng-app="Myapp" ng-controller="AppCtrl" layout="column" layout-fill>
-      <md-toolbar md-scroll-shrink>
+      
+      <md-toolbar md-scroll-shrink ng-show="topmenu">
         <div class="md-toolbar-tools">
           <h3>
             <span>前端工程日志</span>
@@ -33,10 +34,10 @@
           <md-content ng-controller="RightCtrl" class="md-padding">
             <md-list>
               <md-list-item>
-                <a ng-href="#/" class="md-button md-default-theme"><span>博客日志</span></a>
+                <a ng-href="#/" ng-click="menuhshow()" class="md-button md-default-theme"><span>博客日志</span></a>
               </md-list-item>
               <md-list-item>
-                <a ng-href="#/blog" class="md-button md-default-theme"><span>详细页面</span></a>
+                <a ng-href="#/blog" ng-click="menuhide()" class="md-button md-default-theme"><span>详细页面</span></a>
               </md-list-item>
               <md-list-item>
                 <a ng-href="#/blog" class="md-button md-default-theme"><span>关于我们</span></a>
